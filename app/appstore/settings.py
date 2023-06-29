@@ -28,7 +28,7 @@ BASE_URL = os.environ['BASE_URL']
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')=='True'
+DEBUG = os.getenv('DEBUG') == 'True'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
@@ -40,7 +40,6 @@ ALLOWED_HOSTS = ['*', os.getenv('ALLOWED_HOST')]
 AUTH_USER_MODEL = 'accounts.User'
 
 INSTALLED_APPS = [
-    'clearcache',
     'dynamic_admin_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'appstore',
+    'store',
     'accounts',
 ]
 
@@ -85,7 +84,6 @@ SIMPLE_JWT = {
 }
 
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -111,17 +109,15 @@ ASGI_APPLICATION = "appstore.asgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('DATABASE_NAME'),
         'USER': os.getenv('DATABASE_USER_NAME'),
         'PASSWORD': os.getenv('DATABASE_USER_PASSWORD'),
         'HOST': os.getenv('DATABASE_HOST'),
         'PORT': os.getenv('DATABASE_PORT'),
-        'CONN_MAX_AGE':60
+        'CONN_MAX_AGE': 60
     }
 }
-
-
 
 
 # Password validation
