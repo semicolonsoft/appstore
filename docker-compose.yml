@@ -4,7 +4,7 @@ services:
 
   postgres_db:
     restart: always
-    image: postgres:12.4
+    image: postgres
     container_name: app_store_pg_db
     volumes:
       - app_store_pg_db:/var/lib/postgresql/data
@@ -14,7 +14,6 @@ services:
       - POSTGRES_USER=${DATABASE_USER_NAME}
       - POSTGRES_PASSWORD=${DATABASE_USER_PASSWORD}
       - TZ=UTC
-    command: ["postgres", "-c", "log_min_duration_statement=0", "-c", "log_statement=all"] 
 
   web:
     restart: always

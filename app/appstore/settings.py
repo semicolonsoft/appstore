@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['*', os.getenv('ALLOWED_HOST')]
 
 # Application definition
 
+AUTH_USER_MODEL = 'accounts.User'
 
 INSTALLED_APPS = [
     'clearcache',
