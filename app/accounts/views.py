@@ -1,5 +1,5 @@
 from accounts.models import User
-from accounts.serializer import *
+from accounts.serializers import *
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
