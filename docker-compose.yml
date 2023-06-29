@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  postgres_db:
+    restart: always
+    image: postgres:12.4
+    container_name: app_store_pg_db
+    volumes:
+      - app_store_pg_db:/var/lib/postgresql/data
+    env_file: .env
+    environment:
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_USER=${DATABASE_USER_NAME}
+      - POSTGRES_PASSWORD=${DATABASE_USER_PASSWORD}
+      - TZ=UTC
+    command: ["postgres", "-c", "log_min_duration_statement=0", "-c", "log_statement=all"] 
+
+  web:
+    restart: always
+    build: ./app
+    image: app_store
+    container_name: app_store_web
+    volumes:
+      - ./app:/app
+    ports:
+      - "${WEB_ADDR}:8000"
+    env_file: .env
+    # command: python manage.py runserver 0.0.0.0:8000
+    # command: gunicorn --bind 0.0.0.0:8000 -t 900 appstore.wsgi 
+    command: tail -f
+    entrypoint: /app/entrypoint.sh
+    depends_on:
+      - postgres_db
+
+volumes:
+  app_store_pg_db:
