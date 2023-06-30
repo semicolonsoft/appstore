@@ -25,3 +25,19 @@ class ApplicationSerializer(serializers.ModelSerializer):
             developer=user,
             **self.validated_data
         )
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    user = DeveloperSerializer(read_only=True)
+
+    class Meta:
+        model = Comment
+        fields = ['id', 'application', 'user',
+                  'text', 'created_at', 'updated_at']
+        extra_kwargs = {'application': {'write_only': True}}
+
+    def create(self, user):
+        return Comment.objects.create(
+            user=user,
+            **self.validated_data
+        )

@@ -25,3 +25,20 @@ class ApplicationView(APIView):
             application = Application.objects.get(id=application_id)
             serializer = ApplicationSerializer(application)
         return Response({'status': 'success', 'message': '', 'data': serializer.data})
+
+
+class CommentView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, req):
+        serializer = CommentSerializer(data=req.data)
+        serializer.is_valid(raise_exception=True)
+        comment = serializer.create(req.user)
+        data = CommentSerializer(instance=comment).data
+        return Response({'status': 'success', 'message': '', 'data': data})
+
+    def get(self, req):
+        comments = Comment.objects.filter(
+            application_id=req.data['application']).select_related('user')
+        serializer = CommentSerializer(comments, many=True)
+        return Response({'status': 'success', 'message': '', 'data': serializer.data})
