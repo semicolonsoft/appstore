@@ -39,6 +39,6 @@ class CommentView(APIView):
 
     def get(self, req):
         comments = Comment.objects.filter(
-            application_id=req.data['application']).select_related('user')
+            application_id=req.GET['application']).select_related('user')
         serializer = CommentSerializer(comments, many=True)
         return Response({'status': 'success', 'message': '', 'data': serializer.data})
