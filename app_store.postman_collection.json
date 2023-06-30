@@ -1,0 +1,1038 @@
+{
+	"info": {
+		"_postman_id": "b54868be-cbd7-480b-94c1-952fd4f43ed4",
+		"name": "app_store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14357528",
+		"_collection_link": "https://warped-desert-47868.postman.co/workspace/bitycle_ws~155d734c-a830-47e8-aa38-7148cc7da2ff/collection/13315641-b54868be-cbd7-480b-94c1-952fd4f43ed4?action=share&creator=14357528&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7077/accounts/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"099094997674\",\n    \"first_name\": \"ali\",\n    \"last_name\": \"alavi\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/account/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"099094997673\",\n    \"first_name\": \"ali\",\n    \"last_name\": \"alavi\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7077/account/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"account",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 15:46:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwMjQ1NDI1NSwianRpIjoiY2RhNmY0YWI3YTk3NGQ2ZTk5ZjEwMmNkNjkwZDliMGUiLCJ1c2VyX2lkIjo1fQ.-SsE232-6moVibEmBiau1B4DARYAiHNZU8nk5zCEkPE\",\n        \"access_token\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0MjU1LCJqdGkiOiJiMTM0MThmMTE2Mjk0Nzk3OGFlMzY5ZDUzNTIyZDNmNiIsInVzZXJfaWQiOjV9.bw2ydugVfdBvYP6A_4CASDTFXE_nxaihQ-19auYGYfY\"\n    },\n    \"message\": \"\"\n}"
+				},
+				{
+					"name": "already used",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"099094997673\",\n    \"first_name\": \"ali\",\n    \"last_name\": \"alavi\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7077/account/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"account",
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 15:47:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"failed\",\n    \"message\": \"already used\",\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7077/account/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"099094997674\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/account/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"09909499767\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7077/account/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"account",
+								"login"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 16:00:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"failed\",\n    \"message\": \"invalid data\",\n    \"data\": {}\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"099094997674\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7077/account/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"account",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 16:01:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "498"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwMjQ1NDQ4MSwianRpIjoiNzM2OTQyNTkyNWRiNDM2Yzk1ZDA5MTNmNzM3ZDI0NTAiLCJ1c2VyX2lkIjo1fQ._XuvgQa9Lfg24CGvxbUC2Bl3q3lHXu6XFdFhZymc8is\",\n        \"access_token\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA\"\n    },\n    \"message\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7077/account/user_profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7077/account/user_profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"account",
+						"user_profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7077/account/user_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"account",
+								"user_profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 16:04:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": 5,\n        \"phone\": \"099094997674\",\n        \"is_developer\": false,\n        \"image\": null,\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7077/store/application",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "app1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "foo",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"type": "file",
+							"src": "/home/mrm78/projects/django_pr/app-store/app/accounts/urls.py"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/mrm78/projects/django_pr/app-store/app/Dockerfile"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7077/store/application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"store",
+						"application"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "app1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "foo",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/home/mrm78/projects/django_pr/app-store/app/accounts/urls.py"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/mrm78/projects/django_pr/app-store/app/Dockerfile"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7077/store/application",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"store",
+								"application"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 16:50:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": 6,\n        \"name\": \"app1\",\n        \"description\": \"foo\",\n        \"developer\": {\n            \"image\": null,\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"cover\": \"/media/app_covers/urls_oNkDHZ6.py\",\n        \"file\": \"/media/applications/Dockerfile_Ack0cwo\",\n        \"is_active\": false,\n        \"created_at\": \"2023-06-29T20:21:57.021649+03:30\",\n        \"updated_at\": \"2023-06-29T20:21:57.021674+03:30\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7077/store/application/<application_id>",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "app1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "foo",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"type": "file",
+							"src": "/home/mrm78/projects/django_pr/app-store/app/accounts/urls.py"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/mrm78/projects/django_pr/app-store/app/Dockerfile"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7077/store/application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"store",
+						"application"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success (single record)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "app1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "foo",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/home/mrm78/projects/django_pr/app-store/app/accounts/urls.py"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/mrm78/projects/django_pr/app-store/app/Dockerfile"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7077/store/application/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"store",
+								"application",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 16:50:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"app1\",\n        \"description\": \"foo\",\n        \"developer\": {\n            \"image\": null,\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"cover\": \"/media/app_covers/urls_u6Qq9S3.py\",\n        \"file\": \"/media/applications/Dockerfile_N63l3Fn\",\n        \"created_at\": \"2023-06-29T20:20:51.900491+03:30\",\n        \"updated_at\": \"2023-06-29T20:20:51.900519+03:30\"\n    }\n}"
+				},
+				{
+					"name": "success (active records)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "app1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "foo",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/home/mrm78/projects/django_pr/app-store/app/accounts/urls.py"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/mrm78/projects/django_pr/app-store/app/Dockerfile"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7077/store/application",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"store",
+								"application"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jun 2023 17:09:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.17"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "654"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": 7,\n            \"name\": \"app1\",\n            \"description\": \"foo\",\n            \"developer\": {\n                \"image\": null,\n                \"first_name\": \"\",\n                \"last_name\": \"\"\n            },\n            \"cover\": \"/media/app_covers/urls_MKNcrEk.py\",\n            \"file\": \"/media/applications/Dockerfile_iayzQF3\",\n            \"is_active\": true,\n            \"created_at\": \"2023-06-29T20:38:09.482920+03:30\",\n            \"updated_at\": \"2023-06-29T20:38:09.482938+03:30\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"app1\",\n            \"description\": \"foo\",\n            \"developer\": {\n                \"image\": null,\n                \"first_name\": \"\",\n                \"last_name\": \"\"\n            },\n            \"cover\": \"/media/app_covers/urls_jibsmap.py\",\n            \"file\": \"/media/applications/Dockerfile_EoQm0pL\",\n            \"is_active\": true,\n            \"created_at\": \"2023-06-29T20:38:14.801154+03:30\",\n            \"updated_at\": \"2023-06-29T20:38:14.801202+03:30\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7077/store/comment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"application\": 2,\n    \"text\": \"good\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/store/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"store",
+						"comment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"application\": 2,\n    \"text\": \"good\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7077/store/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"store",
+								"comment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "gunicorn"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 09:47:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": 2,\n        \"user\": {\n            \"image\": null,\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"text\": \"good\",\n        \"created_at\": \"2023-06-30T13:17:24.502091+03:30\",\n        \"updated_at\": \"2023-06-30T13:17:24.502124+03:30\"\n    }\n}"
+				},
+				{
+					"name": "success (get)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1MjU0NDgxLCJqdGkiOiI4NjYyNWEwNWY1MjI0ZDg2YjYwYjI2ZDI4ZmRlZmUwZCIsInVzZXJfaWQiOjV9.mZpeTAibL_YUSozEIjUVhx-6gHWUXL60jNsq4zk9HmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"application\": 2,\n    \"text\": \"good\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7077/store/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7077",
+							"path": [
+								"store",
+								"comment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "gunicorn"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 09:48:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "386"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user\": {\n                \"image\": null,\n                \"first_name\": \"\",\n                \"last_name\": \"\"\n            },\n            \"text\": \"good\",\n            \"created_at\": \"2023-06-30T13:17:08.221180+03:30\",\n            \"updated_at\": \"2023-06-30T13:17:08.221200+03:30\"\n        },\n        {\n            \"id\": 2,\n            \"user\": {\n                \"image\": null,\n                \"first_name\": \"\",\n                \"last_name\": \"\"\n            },\n            \"text\": \"good\",\n            \"created_at\": \"2023-06-30T13:17:24.502091+03:30\",\n            \"updated_at\": \"2023-06-30T13:17:24.502124+03:30\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
